@@ -765,20 +765,22 @@
 
   /* ---------- MARK / BRAND STAMP ---------- */
   .mark-section {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 140px 32px;
+    background: var(--paper);
+    color: var(--ink);
+    padding: 160px 32px;
     position: relative;
     overflow: hidden;
     text-align: center;
+    border-top: 1px solid rgba(14,14,14,0.08);
+    border-bottom: 1px solid rgba(14,14,14,0.08);
   }
   .mark-section::before {
     content: "";
     position: absolute; inset: 0;
     background-image:
-      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-    background-size: 64px 64px;
+      linear-gradient(rgba(14,14,14,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(14,14,14,0.04) 1px, transparent 1px);
+    background-size: 72px 72px;
     pointer-events: none;
     z-index: 0;
   }
@@ -791,29 +793,29 @@
   .mark-rule {
     width: 60px; height: 2px;
     background: var(--ember);
-    margin: 0 auto 40px;
+    margin: 0 auto 44px;
   }
   .mark-logo {
-    max-width: 460px;
-    width: 62%;
+    max-width: 520px;
+    width: 68%;
     height: auto;
     display: block;
-    margin: 0 auto 36px;
-    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.35));
+    margin: 0 auto 40px;
+    filter: drop-shadow(0 14px 32px rgba(14,14,14,0.18));
   }
   .mark-tagline {
     font-family: var(--serif);
     font-style: italic;
-    font-size: clamp(20px, 2.4vw, 28px);
+    font-size: clamp(22px, 2.6vw, 30px);
     line-height: 1.3;
-    color: var(--butter);
+    color: var(--ember);
     letter-spacing: 0.01em;
     margin: 0;
   }
   @media (max-width: 768px) {
-    .mark-section { padding: 88px 24px; }
-    .mark-logo { max-width: 280px; width: 78%; margin-bottom: 28px; }
-    .mark-rule { margin-bottom: 28px; }
+    .mark-section { padding: 96px 24px; }
+    .mark-logo { max-width: 300px; width: 78%; margin-bottom: 32px; }
+    .mark-rule { margin-bottom: 32px; }
   }
 
   /* ---------- RECEIPT ---------- */
